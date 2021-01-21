@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(0, 9%, 88%);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* navbar container */
+.navbar{
+    background-color: hsl(193, 94%, 11%);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.navbar > h1{
+    letter-spacing: 3px;
+    font-size: 1.1em;
+    float: left;
+    color: white;
+}
+
+.navbar > a{
+    float: right;
+    padding-right: 36px;
+    text-decoration: underline;
+    color: white;
+}
+
+.navbar > h1 > a{
+    text-decoration: none;
+    color: white;
+}
+
+/* main container */
+
+.App-container{
+    position: relative;
+}
+
+.App-container::after{
+    content: "";
+    opacity: 0.8;
+    background: rgb(26, 31, 41) url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp-silver-select-202011?wid=1280&hei=1190&fmt=jpeg&qlt=80&.v=1603406899000") no-repeat fixed top;
+    /* background-blend-mode: luminosity; */
+    /* also change the blend mode to what suits you, from darken, to other 
+    many options as you deem fit*/
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+}
+
+.main-container{
+    margin: 6px 0;
+}
+
+.items > div >img{
+    max-width: 26vw;
+    margin: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item > div{
+    display: inline;
+} 
+
+.buy-btn{
+    float: right;
+    padding: 1em 2em;
+    background-color: rgb(255, 207, 71);
+    border: 1px solid rgb(255, 207, 71);
+    border-radius: 6px;
+    width: 1fr;
+    outline-color: rgb(255, 207, 71);
+    font-size: 14px;
+}
+
+.buy-btn:hover{
+    background-color: rgba(255, 207, 71, 0.7)
+}
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.items > div{
+    background-color: #fff;
+    flex: 30%;
+    margin: 6px 6px;
+    border-radius: 1px;
+    padding: 10px;
+}
+
+.item > div > h3{
+    letter-spacing: 1px;
+    float: left;
+}
+
+.quantity-btn{
+    background-color: red;
+    padding: 0.5em 1em;
+    margin: 3px;
+    background-color: grey;
+    border: 1px solid grey;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+
+}
+
+.quantity-btn:disabled{
+    opacity: 0.4;
+}
+
+#emptyCart{
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    border: 1px solid  rgba(255, 255, 255, 0);
+    padding: 10px;
+    font-weight: bold;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+}
